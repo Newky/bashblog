@@ -60,6 +60,7 @@
 #
 #########################################################################################
 #
+# 1.5.1    Misc bugfixes and parameter checks
 # 1.5      Durad Radojicic refactored some code and added flexibility and i18n
 # 1.4.2    Now issues are handled at Github
 # 1.4.1    Some code refactoring
@@ -88,36 +89,36 @@ global_variables() {
     # If you want to fork the project please contact me first, I wouldn't mind opening a git
     # or some shared code base and collaborate with other people.
     global_software_name="BashBlog"
-    global_software_version="1.5"
+    global_software_version="1.5.1"
 
     # Blog title
-    global_title="Waiting for the jobs to finish"
+    global_title="My fancy blog"
     # The typical subtitle for each blog
-    global_description="Thoughts on science and tips for researchers who use computers"
+    global_description="A blog about turtles and carrots"
     # The public base URL for this blog
-    global_url="http://mmb.pcb.ub.es/~carlesfe/blog"
+    global_url="http://example.com/blog"
 
     # Your name
-    global_author="Carles Fenollosa"
+    global_author="John Smith"
     # You can use twitter or facebook or anything for global_author_url
-    global_author_url="http://mmb.pcb.ub.es/~carlesfe" 
+    global_author_url="http://twitter.com/example" 
     # Your email
-    global_email="carles.fenollosa@bsc.es"
+    global_email="john@smith.com"
 
     # CC by-nc-nd is a good starting point, you can change this to "&copy;" for Copyright
     global_license="CC by-nc-nd"
 
-    # If you have a Google Analytics ID, put it here.
+    # If you have a Google Analytics ID (UA-XXXXX), put it here.
     # If left empty (i.e. "") Analytics will be disabled
-    global_analytics="UA-752819-13"
+    global_analytics=""
 
     # Leave this empty (i.e. "") if you don't want to use feedburner, 
     # or change it to your own URL
-    global_feedburner="http://feeds.feedburner.com/WaitingForTheJobsToFinish"
+    global_feedburner=""
 
     # Leave these empty if you don't want to use twitter for comments
     global_twitter="true"
-    global_twitter_username="cfenollosa"
+    global_twitter_username="example"
 
 
     # Blog generated files
@@ -606,6 +607,12 @@ reset() {
 do_main() {
     global_variables
 
+    # Check for $EDITOR
+    if [[ -z "$EDITOR" ]]; then
+        echo "Please set your \$EDITOR environment variable"
+        exit
+    fi
+
     # Check for validity of argument
     if [ "$1" != "reset" ] && [ "$1" != "post" ] && [ "$1" != "rebuild" ] && [ "$1" != "list" ] && [ "$1" != "edit" ]; then 
         usage; exit; 
@@ -614,6 +621,13 @@ do_main() {
     if [ "$1" == "list" ]; then
         list_posts
         exit
+    fi
+
+    if [[ "$1" == "edit" ]]; then
+        if [[ $# -lt 2 ]] || [[ ! -f "$2" ]]; then
+            echo "Please enter a valid html file to edit"
+            exit
+        fi
     fi
 
     # Test for existing html files

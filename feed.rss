@@ -2,9 +2,46 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Newkys Brain Farts.</title><link>http://richydelaney.com/snippets</link>
 <description>Snippets of all things tech and otherwise.</description><language>en</language>
-<lastBuildDate>Tue, 12 Mar 2013 22:54:12 +0000</lastBuildDate>
-<pubDate>Tue, 12 Mar 2013 22:54:12 +0000</pubDate>
+<lastBuildDate>Tue, 12 Mar 2013 23:35:20 +0000</lastBuildDate>
+<pubDate>Tue, 12 Mar 2013 23:35:20 +0000</pubDate>
 <atom:link href="http://richydelaney.com/snippets/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Publishing a git repo using remotes on a remote server
+</title><description><![CDATA[
+
+Steps are as follows on remote server:
+<ul>
+<li>mkdir reponame.git</li>
+<li>cd reponame.git</li>
+<li>git init --bare</li>
+</ul>
+<br/>
+If you have the remote server set up as an ssh machine in .ssh/config, the process becomes a breeze. Presuming the host is called "remoteserver". You would do the following to add it as a remote in your local git repository.
+<pre>
+git remote add web remoteserver:reponame.git
+</pre>
+This also presumes that reponame.git was created in the users home directory that you login as. To push changes, add them to your commits. and just push to the remote using (presuming that the changes you have are on master):
+<pre>
+git push web master
+</pre>
+<br/>
+Additional trick is to set up a place for this to be pushed to (i.e a bare repo just holds the git data but its inaccessible in the usual way to do that, you can define a hook in "hooks/post-receive". Here is an example script which installs the changes into ~/reponame directory.
+<pre>
+#!/bin/sh
+GIT_WORK_TREE=$HOME/reponame
+export GIT_WORK_TREE
+git checkout -f
+</pre>
+<!-- text end -->
+<p id='twitter'>Comments? &nbsp;
+<a href="https://twitter.com/share" class="twitter-share-button" data-text="&lt;Type your comment here but please leave the URL so that other people can follow the comments&gt;" data-url="http://richydelaney.com/snippets/publishing-a-git-repo-using-remotes-on-a-remote-server.html"
+ data-via="RichyDelaney"
+>Tweet</a>	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</p>
+]]></description><link>http://richydelaney.com/snippets/publishing-a-git-repo-using-remotes-on-a-remote-server.html</link>
+<guid>http://richydelaney.com/snippets/publishing-a-git-repo-using-remotes-on-a-remote-server.html</guid>
+<dc:creator>Richy Delaney</dc:creator>
+<pubDate>Tue, 12 Mar 2013 23:33:00 +0000</pubDate></item>
 <item><title>
 Trying out the bash blog
 </title><description><![CDATA[

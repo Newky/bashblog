@@ -90,18 +90,18 @@ global_variables() {
     global_software_version="1.5.1"
 
     # Blog title
-    global_title="My fancy blog"
+    global_title="Newkys Brain Farts."
     # The typical subtitle for each blog
-    global_description="A blog about turtles and carrots"
+    global_description="Snippets of all things tech and otherwise."
     # The public base URL for this blog
-    global_url="http://example.com/blog"
+    global_url="http://richydelaney.com/snippets"
 
     # Your name
-    global_author="John Smith"
+    global_author="Richy Delaney"
     # You can use twitter or facebook or anything for global_author_url
-    global_author_url="http://twitter.com/example" 
+    global_author_url="http://twitter.com/RichyDelaney" 
     # Your email
-    global_email="john@smith.com"
+    global_email="richdel1991@gmail.com"
 
     # CC by-nc-nd is a good starting point, you can change this to "&copy;" for Copyright
     global_license="CC by-nc-nd"
@@ -116,7 +116,7 @@ global_variables() {
 
     # Leave these empty if you don't want to use twitter for comments
     global_twitter="true"
-    global_twitter_username="example"
+    global_twitter_username="RichyDelaney"
 
 
     # Blog generated files
@@ -133,7 +133,7 @@ global_variables() {
     # "Comments?" (used in twitter link after every post)
     template_comments="Comments?"
     # "View more posts" (used on bottom of index page as link to archive)
-    template_archive="View more posts"
+    template_archive="Sneak a look at some more snippets"
     # "Back to the index page" (used on archive page, it is link to blog index)
     template_archive_index_page="Back to the index page"
     # "Subscribe" (used on bottom of index page, it is link to RSS feed)

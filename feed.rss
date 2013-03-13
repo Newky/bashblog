@@ -2,9 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Newkys Brain Farts.</title><link>http://richydelaney.com/snippets</link>
 <description>Snippets of all things tech and otherwise.</description><language>en</language>
-<lastBuildDate>Wed, 13 Mar 2013 12:32:42 +0000</lastBuildDate>
-<pubDate>Wed, 13 Mar 2013 12:32:42 +0000</pubDate>
+<lastBuildDate>Wed, 13 Mar 2013 17:49:00 +0000</lastBuildDate>
+<pubDate>Wed, 13 Mar 2013 17:49:00 +0000</pubDate>
 <atom:link href="http://richydelaney.com/snippets/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Using grep, named pipes and some vim trickery for refactoring.
+</title><description><![CDATA[
+
+Thought I would pen a post about how I use a mixture of the above tools to do some naming refactoring in vim.
+First, I use grep with a load of flags (to specify things like only python files, case insensitivity). I also include the flag to only print the filenames, I then pipe these into a named pipe as follows:
+<pre>
+grep -il "some_function_name" > /tmp/named_pipe
+</pre>
+I then open all these files in separate tabs in vim using the following (be careful where you are when u run vim, as the directory structure is important.
+<pre>
+vim -p `cat /tmp/named_pipe`
+</pre>
+At this point, you can do a mass refactor of that search term as follows. Lets say I want to change "some_function_name" to "function_name". In vim, I do the following:
+<pre>
+:bufdo %s/some_function_name/function_name/gc | update
+</pre>
+<!-- text end -->
+<p id='twitter'>Comments? &nbsp;
+<a href="https://twitter.com/share" class="twitter-share-button" data-text="&lt;Type your comment here but please leave the URL so that other people can follow the comments&gt;" data-url="http://richydelaney.com/snippets/using-grep-named-pipes-and-some-vim-trickery-for-refactoring.html"
+ data-via="RichyDelaney"
+>Tweet</a>	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</p>
+]]></description><link>http://richydelaney.com/snippets/using-grep-named-pipes-and-some-vim-trickery-for-refactoring.html</link>
+<guid>http://richydelaney.com/snippets/using-grep-named-pipes-and-some-vim-trickery-for-refactoring.html</guid>
+<dc:creator>Richy Delaney</dc:creator>
+<pubDate>Wed, 13 Mar 2013 17:47:00 +0000</pubDate></item>
 <item><title>
 Python decorator to automagically return to same directory.
 </title><description><![CDATA[

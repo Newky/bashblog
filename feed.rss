@@ -2,9 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Newkys Brain Farts.</title><link>http://richydelaney.com/snippets</link>
 <description>Snippets of all things tech and otherwise.</description><language>en</language>
-<lastBuildDate>Tue, 12 Mar 2013 23:35:20 +0000</lastBuildDate>
-<pubDate>Tue, 12 Mar 2013 23:35:20 +0000</pubDate>
+<lastBuildDate>Wed, 13 Mar 2013 12:32:42 +0000</lastBuildDate>
+<pubDate>Wed, 13 Mar 2013 12:32:42 +0000</pubDate>
 <atom:link href="http://richydelaney.com/snippets/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Python decorator to automagically return to same directory.
+</title><description><![CDATA[
+
+<p>This is just a simple little hack which I wrote to allow me to do a load of changing directory in a function but when that function exits, to return to the directory I was in when I entered. This makes it a lot easier to reason about where the current flow of the project is.</p>
+<script src="https://gist.github.com/Newky/5151640.js"></script>
+<!-- text end -->
+<p id='twitter'>Comments? &nbsp;
+<a href="https://twitter.com/share" class="twitter-share-button" data-text="&lt;Type your comment here but please leave the URL so that other people can follow the comments&gt;" data-url="http://richydelaney.com/snippets/python-decorator-to-automagically-return-to-same-directory.html"
+ data-via="RichyDelaney"
+>Tweet</a>	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</p>
+]]></description><link>http://richydelaney.com/snippets/python-decorator-to-automagically-return-to-same-directory.html</link>
+<guid>http://richydelaney.com/snippets/python-decorator-to-automagically-return-to-same-directory.html</guid>
+<dc:creator>Richy Delaney</dc:creator>
+<pubDate>Wed, 13 Mar 2013 12:32:32 +0000</pubDate></item>
 <item><title>
 Publishing a git repo using remotes on a remote server
 </title><description><![CDATA[

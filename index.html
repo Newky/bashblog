@@ -14,6 +14,32 @@
 </div></div></div>
 <div id="divbody"><div class="content">
 <!-- entry begin -->
+<h3><a class="ablack" href="http://richydelaney.com/snippets/a-useful-bash-function-for-coding-with-git.html">
+A useful bash function for coding with git.
+</a></h3>
+<div class="subtitle">March 14, 2013 &mdash; 
+Richy Delaney</div>
+<!-- text begin -->
+
+Ever commit some code for review, and get some comments. Want to quickly open vim up with the files from the last commit. I have created a function in my .bashrc to accomadate this. To do this, I use git diff with --names-only:
+<pre>
+function vmod {
+vim -p `git diff --name-only $1`
+}
+</pre>
+Now on a bash shell, you can do the following to grab all the edited files from the last commit:
+<pre>
+$ vmod HEAD~1
+</pre>
+This will open (in tabs) all the previously edited files.
+<!-- text end -->
+<p id='twitter'>Comments? &nbsp;
+<a href="https://twitter.com/share" class="twitter-share-button" data-text="&lt;Type your comment here but please leave the URL so that other people can follow the comments&gt;" data-url="http://richydelaney.com/snippets/a-useful-bash-function-for-coding-with-git.html"
+ data-via="RichyDelaney"
+>Tweet</a>	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</p>
+<!-- entry end -->
+<!-- entry begin -->
 <h3><a class="ablack" href="http://richydelaney.com/snippets/using-grep-named-pipes-and-some-vim-trickery-for-refactoring.html">
 Using grep, named pipes and some vim trickery for refactoring.
 </a></h3>

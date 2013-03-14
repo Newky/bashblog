@@ -2,9 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Newkys Brain Farts.</title><link>http://richydelaney.com/snippets</link>
 <description>Snippets of all things tech and otherwise.</description><language>en</language>
-<lastBuildDate>Wed, 13 Mar 2013 17:49:00 +0000</lastBuildDate>
-<pubDate>Wed, 13 Mar 2013 17:49:00 +0000</pubDate>
+<lastBuildDate>Thu, 14 Mar 2013 11:59:34 +0000</lastBuildDate>
+<pubDate>Thu, 14 Mar 2013 11:59:34 +0000</pubDate>
 <atom:link href="http://richydelaney.com/snippets/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+A useful bash function for coding with git.
+</title><description><![CDATA[
+
+Ever commit some code for review, and get some comments. Want to quickly open vim up with the files from the last commit. I have created a function in my .bashrc to accomadate this. To do this, I use git diff with --names-only:
+<pre>
+function vmod {
+vim -p `git diff --name-only $1`
+}
+</pre>
+Now on a bash shell, you can do the following to grab all the edited files from the last commit:
+<pre>
+$ vmod HEAD~1
+</pre>
+This will open (in tabs) all the previously edited files.
+<!-- text end -->
+<p id='twitter'>Comments? &nbsp;
+<a href="https://twitter.com/share" class="twitter-share-button" data-text="&lt;Type your comment here but please leave the URL so that other people can follow the comments&gt;" data-url="http://richydelaney.com/snippets/a-useful-bash-function-for-coding-with-git.html"
+ data-via="RichyDelaney"
+>Tweet</a>	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</p>
+]]></description><link>http://richydelaney.com/snippets/a-useful-bash-function-for-coding-with-git.html</link>
+<guid>http://richydelaney.com/snippets/a-useful-bash-function-for-coding-with-git.html</guid>
+<dc:creator>Richy Delaney</dc:creator>
+<pubDate>Thu, 14 Mar 2013 11:59:28 +0000</pubDate></item>
 <item><title>
 Using grep, named pipes and some vim trickery for refactoring.
 </title><description><![CDATA[

@@ -21,7 +21,7 @@ A useful bash function for coding with git.
 Richy Delaney</div>
 <!-- text begin -->
 
-Ever commit some code for review, and get some comments. Want to quickly open vim up with the files from the last commit. I have created a function in my .bashrc to accomadate this. To do this, I use git diff with --names-only:
+Ever commit some code for review, and get some comments. Want to quickly open vim up with the files from the last commit. I have created a function in my .bashrc to accomadate this. To do this, I use git diff with --name-only:
 <pre>
 function vmod {
 vim -p `git diff --name-only $1`

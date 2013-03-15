@@ -2,9 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Newkys Brain Farts.</title><link>http://richydelaney.com/snippets</link>
 <description>Snippets of all things tech and otherwise.</description><language>en</language>
-<lastBuildDate>Thu, 14 Mar 2013 12:00:43 +0000</lastBuildDate>
-<pubDate>Thu, 14 Mar 2013 12:00:43 +0000</pubDate>
+<lastBuildDate>Fri, 15 Mar 2013 13:07:54 +0000</lastBuildDate>
+<pubDate>Fri, 15 Mar 2013 13:07:54 +0000</pubDate>
 <atom:link href="http://richydelaney.com/snippets/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Note taking application for bash.
+</title><description><![CDATA[
+
+I use a very simple means for taking notes while at my desktop. Often during the name I will need a place to write something quick. I love to write in vim, its where I am at my quickest. I have tried multiple different ways to do this but this is my favourite so far. Its not perfect, but its simple which means that it is very easy to extend this system to work with things like dropbox syncing or something like that.<br><br>
+Put this snippet in your bashrc:
+<pre>
+function note()
+{
+if [ ! -d $HOME/Notes/ ]; then
+mkdir $HOME/Notes/
+fi;
+
+vim -p $HOME/Notes/$1.note
+}
+</pre>
+Please note this will create files in a directory named "Notes" in your home directory. The nice thing is that the syntax for using this is incredibly simple. Just write the following to write a note:
+<pre>
+$ note somethingimportantIneedtoremember
+</pre>
+You can edit a note very quickly simply by retyping the name.I have found this incredibly useful.
+<!-- text end -->
+<p id='twitter'>Comments? &nbsp;
+<a href="https://twitter.com/share" class="twitter-share-button" data-text="&lt;Type your comment here but please leave the URL so that other people can follow the comments&gt;" data-url="http://richydelaney.com/snippets/note-taking-application-for-bash.html"
+ data-via="RichyDelaney"
+>Tweet</a>	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</p>
+]]></description><link>http://richydelaney.com/snippets/note-taking-application-for-bash.html</link>
+<guid>http://richydelaney.com/snippets/note-taking-application-for-bash.html</guid>
+<dc:creator>Richy Delaney</dc:creator>
+<pubDate>Fri, 15 Mar 2013 13:07:51 +0000</pubDate></item>
 <item><title>
 A useful bash function for coding with git.
 </title><description><![CDATA[

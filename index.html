@@ -14,6 +14,25 @@
 </div></div></div>
 <div id="divbody"><div class="content">
 <!-- entry begin -->
+<h3><a class="ablack" href="http://richydelaney.com/snippets/git-commit-messages-in-vim.html">
+Git commit messages in vim
+</a></h3>
+<div class="subtitle">March 19, 2013 &mdash; 
+Richy Delaney</div>
+<!-- text begin -->
+
+<p>If you write your git commit messages in vim, there is a good chance that when you go to write it, your vim cursor is not on the first line. I often questioned why this is. After a quick google this morning, I discovered that its due to vim remembering position of the previous git commit. Stick this in your .vimrc for fix.</p>
+<pre>
+autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
+</pre>
+<!-- text end -->
+<p id='twitter'>Comments? &nbsp;
+<a href="https://twitter.com/share" class="twitter-share-button" data-text="&lt;Type your comment here but please leave the URL so that other people can follow the comments&gt;" data-url="http://richydelaney.com/snippets/git-commit-messages-in-vim.html"
+ data-via="RichyDelaney"
+>Tweet</a>	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</p>
+<!-- entry end -->
+<!-- entry begin -->
 <h3><a class="ablack" href="http://richydelaney.com/snippets/note-taking-application-for-bash.html">
 Note taking application for bash.
 </a></h3>

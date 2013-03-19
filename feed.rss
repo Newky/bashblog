@@ -2,9 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Newkys Brain Farts.</title><link>http://richydelaney.com/snippets</link>
 <description>Snippets of all things tech and otherwise.</description><language>en</language>
-<lastBuildDate>Fri, 15 Mar 2013 13:07:54 +0000</lastBuildDate>
-<pubDate>Fri, 15 Mar 2013 13:07:54 +0000</pubDate>
+<lastBuildDate>Tue, 19 Mar 2013 10:56:13 +0000</lastBuildDate>
+<pubDate>Tue, 19 Mar 2013 10:56:13 +0000</pubDate>
 <atom:link href="http://richydelaney.com/snippets/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Git commit messages in vim
+</title><description><![CDATA[
+
+<p>If you write your git commit messages in vim, there is a good chance that when you go to write it, your vim cursor is not on the first line. I often questioned why this is. After a quick google this morning, I discovered that its due to vim remembering position of the previous git commit. Stick this in your .vimrc for fix.</p>
+<pre>
+autocmd FileType gitcommit call setpos('.', [0, 1, 1, 0])
+</pre>
+<!-- text end -->
+<p id='twitter'>Comments? &nbsp;
+<a href="https://twitter.com/share" class="twitter-share-button" data-text="&lt;Type your comment here but please leave the URL so that other people can follow the comments&gt;" data-url="http://richydelaney.com/snippets/git-commit-messages-in-vim.html"
+ data-via="RichyDelaney"
+>Tweet</a>	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</p>
+]]></description><link>http://richydelaney.com/snippets/git-commit-messages-in-vim.html</link>
+<guid>http://richydelaney.com/snippets/git-commit-messages-in-vim.html</guid>
+<dc:creator>Richy Delaney</dc:creator>
+<pubDate>Tue, 19 Mar 2013 10:55:00 +0000</pubDate></item>
 <item><title>
 Note taking application for bash.
 </title><description><![CDATA[

@@ -2,9 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Newkys Brain Farts.</title><link>http://richydelaney.com/snippets</link>
 <description>Snippets of all things tech and otherwise.</description><language>en</language>
-<lastBuildDate>Tue, 19 Mar 2013 10:56:13 +0000</lastBuildDate>
-<pubDate>Tue, 19 Mar 2013 10:56:13 +0000</pubDate>
+<lastBuildDate>Wed, 20 Mar 2013 17:01:09 +0000</lastBuildDate>
+<pubDate>Wed, 20 Mar 2013 17:01:09 +0000</pubDate>
 <atom:link href="http://richydelaney.com/snippets/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Github pull requests from the command line
+</title><description><![CDATA[
+
+<p> Wanted a way to create pull requests from the commandline. I created a simple python script which does this in a relatively easy way. </p>
+<a href='https://github.com/Newky/github-pull-request'>Github pull requests</a>
+<!-- text end -->
+<p id='twitter'>Comments? &nbsp;
+<a href="https://twitter.com/share" class="twitter-share-button" data-text="&lt;Type your comment here but please leave the URL so that other people can follow the comments&gt;" data-url="http://richydelaney.com/snippets/github-pull-requests-from-the-command-line.html"
+ data-via="RichyDelaney"
+>Tweet</a>	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</p>
+]]></description><link>http://richydelaney.com/snippets/github-pull-requests-from-the-command-line.html</link>
+<guid>http://richydelaney.com/snippets/github-pull-requests-from-the-command-line.html</guid>
+<dc:creator>Richy Delaney</dc:creator>
+<pubDate>Wed, 20 Mar 2013 17:00:51 +0000</pubDate></item>
 <item><title>
 Git commit messages in vim
 </title><description><![CDATA[
